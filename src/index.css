@@ -1,0 +1,16 @@
+.overlay-text {
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  opacity: 0.5;
+}
+.orange-text {
+  color: orange;
+  text-align: end;
+}
+.hr-border {
+  border: 0.6px solid;
+}
+.small-fonts h6 small {
+  font-size: 60%;
+}
