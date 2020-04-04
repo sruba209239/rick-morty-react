@@ -1,6 +1,6 @@
 .overlay-text {
   position: absolute;
-  top: 170px;
+  top: 12.6em;
   left: 0px;
   opacity: 0.5;
 }
@@ -13,4 +13,8 @@
 }
 .small-fonts h6 small {
   font-size: 60%;
+}
+.line-content{
+  display: flex;
+  justify-content: space-between;
 }

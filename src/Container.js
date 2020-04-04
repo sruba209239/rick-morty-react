@@ -19,7 +19,6 @@ class Container extends React.Component {
 
                 response.json().then(data => {
                     console.log(data);
-                    debugger;
                     this.setState({
                         characterList: data.results,
                         info: data.info
@@ -31,7 +30,7 @@ class Container extends React.Component {
             });
     }
     render() {
-        return <div className="container">
+        return <div className="container-fluid">
             <div className="row py-5">
                 <FiltersView />
                 <ContentView list={this.state.characterList} />
