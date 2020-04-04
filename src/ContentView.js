@@ -29,18 +29,10 @@ class ContentView extends React.Component {
             </div>
             {/* <!-- cards --> */}
             <div className="row my-3">
-                <div className="col-md-3 col-sm-6 px-1">
-                    <CardComponent />
-                </div>
-                <div className="col-md-3 col-sm-6 px-1">
-                    <div className="border border-dark"> Sruba</div>
-                </div>
-                <div className="col-md-3 col-sm-6 px-1">
-                    <div className="border border-dark"> Sruba</div>
-                </div>
-                <div className="col-md-3 col-sm-6 px-1">
-                    <div className="border border-dark"> Sruba</div>
-                </div>
+                <CardComponent />
+                <CardComponent />
+                <CardComponent />
+                <CardComponent />
             </div>
         </div>;
     }
