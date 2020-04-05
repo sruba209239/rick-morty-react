@@ -7,7 +7,8 @@ class ContentView extends React.Component {
         this.state = {
             searchText: '',
             holder: [],
-            currentOrder: 'asc'
+            currentOrder: 'asc',
+            search: false
         };
     }
     sortList(type) {
@@ -17,31 +18,35 @@ class ContentView extends React.Component {
             currentOrder: type
         });
     }
-    // searchField(e) {
-    //     this.setState({
-    //         searchText: e.target.value,
-    //         holder: this.state.holder,
-    //         currentOrder: this.state.currentOrder
-    //     })
-    // }
-    // searchFunction() {
-    //     debugger;
-    //     let tempList = this.state.holder.slice().filter(item => {
-    //         return item.props.list.name.toLowerCase().includes(this.state.searchText.toLowerCase())
-    //     });
-    //     this.setState({
-    //         searchText: this.state.searchText,
-    //         holder: tempList,
-    //         currentOrder: this.state.currentOrder
-    //     });
-    // }
+    searchField(e) {
+        this.setState({
+            searchText: e.target.value,
+            holder: this.state.holder,
+            currentOrder: this.state.currentOrder,
+            search: false
+        })
+    }
+    searchFunction() {
+        debugger;
+        let tempList = this.state.holder.filter(item => {
+            return item.name.toLowerCase().includes(this.state.searchText.toLowerCase())
+        });
+        this.setState({
+            searchText: this.state.searchText,
+            holder: tempList,
+            currentOrder: this.state.currentOrder,
+            search: true
+        });
+    }
     render() {
         if (this.props.list && this.props.list.length) {
-            if (this.state.currentOrder === 'desc') {
-                this.state.holder = this.props.list.sort((a, b) => (b.id - a.id));
-            }
-            else {
-                this.state.holder = this.props.list.sort((a, b) => (a.id - b.id));
+            if (!this.state.search) {
+                if (this.state.currentOrder === 'desc') {
+                    this.state.holder = this.props.list.sort((a, b) => (b.id - a.id));
+                }
+                else {
+                    this.state.holder = this.props.list.sort((a, b) => (a.id - b.id));
+                }
             }
 
             const cards = this.state.holder.map((element, index) => <CardComponent key={index} list={element} />);
