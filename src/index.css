@@ -22,3 +22,9 @@
   height: 300px;
   width: 300px;
 }
+.card-set {
+  max-width: 300px;
+}
+.bg-black {
+  background-color: black;
+}
