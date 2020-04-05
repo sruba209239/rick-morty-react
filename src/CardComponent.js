@@ -4,7 +4,7 @@ class CardComponent extends React.Component {
     render() {
         debugger;
         let cardData = this.props.list;
-        return <div className="col-md-3 col-sm-6 px-0">
+        return <div className="col-md-3 col-6 px-0">
             <div className="card bg-dark text-white">
                 <img className="card-img-top" src={cardData.image}
                     alt={cardData.name} />
