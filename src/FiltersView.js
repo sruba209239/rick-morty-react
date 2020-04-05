@@ -51,13 +51,13 @@ class FiltersView extends React.Component {
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="postFilter" onChange={() => this.props.filter(['origin', 'paEarth'])} />
+                    <input className="form-check-input" type="checkbox" value="" id="postFilter" onChange={() => this.props.filter(['origin', 'post-apocalyptic earth'])} />
                     <label className="form-check-label" htmlFor="postFilter">
                         <small>Post-Apocalyptic Earth</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia4'])} />
+                    <input className="form-check-input" type="checkbox" value="" id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia 4'])} />
                     <label className="form-check-label" htmlFor="nuptiaFilter">
                         <small>Nuptia 4</small>
                     </label>

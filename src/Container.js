@@ -59,7 +59,6 @@ class Container extends React.Component {
         if (list && list.length) {
             // apply species filters
             if (this.state.filter.species.length) {
-                debugger;
                 filter = this.state.filter.species;
                 if (filter.includes('other')) {
                     list = this.state.characterList.filter(item => (item.species.toLowerCase() !== 'human' && item.species.toLowerCase() !== 'alien'));
@@ -69,11 +68,31 @@ class Container extends React.Component {
                 filter.forEach(el => {
                     list = list.concat(this.state.characterList.filter(item => (item.species.toLowerCase() === el)));
                 });
-            } else {
-                list = this.state.characterList.filter(item => (item.species));
             }
 
-            debugger;
+            // apply gender filter
+            if (this.state.filter.gender.length) {
+                let tempList = list.slice();
+                list = [];
+                filter = this.state.filter.gender;
+                filter.forEach(item => {
+                    list = list.concat(tempList.filter(el => el.gender.toLowerCase() === item));
+                });
+            }
+
+            // apply origin filter
+            if (this.state.filter.origin.length) {
+                let tempList = list.slice();
+                list = [];
+                filter = this.state.filter.origin;
+                if (filter.includes('other')) {
+                    list = list.concat(tempList.filter(item => (item.origin.name.toLowerCase() !== 'unknown' && item.origin.name.toLowerCase() !== 'post-apocalyptic earth' && item.origin.name.toLowerCase() !== 'nuptia 4')));
+                }
+                filter.forEach(el => {
+                    list = list.concat(tempList.filter(item => (item.origin.name.toLowerCase() === el)));
+                });
+            }
+
 
             return <div className="container-fluid">
                 <p>this.state.filter.species : {this.state.filter.species}</p>

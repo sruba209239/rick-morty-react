@@ -27,7 +27,6 @@ class ContentView extends React.Component {
         })
     }
     searchFunction() {
-        debugger;
         let tempList = this.state.holder.filter(item => {
             return item.name.toLowerCase().includes(this.state.searchText.toLowerCase())
         });
@@ -67,7 +66,7 @@ class ContentView extends React.Component {
                                 <button className="btn btn-secondary dropdown-toggle col-sm-12 text-left" type="button"
                                     id="sortmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Sort by ID
-                    </button>
+                                </button>
                                 <div className="dropdown-menu col-sm-12 text-left" aria-labelledby="sortmenu">
                                     <button className="dropdown-item" type="button" onClick={() => this.sortList('asc')}>Ascending</button>
                                     <button className="dropdown-item" type="button" onClick={() => this.sortList('desc')}>Descending</button>
