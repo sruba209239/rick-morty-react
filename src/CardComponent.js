@@ -8,7 +8,7 @@ class CardComponent extends React.Component {
             <div className="card bg-dark text-white">
                 <img className="card-img-top dimensions" src={cardData.image}
                     alt={cardData.name} />
-                <div className="card-img-overlay">
+                <div className="card-img-overlay dimensions">
                     <div className="card-text bg-dark overlay-text col-md-12 text-truncate">
                         <h4 className="text-white">{cardData.name}</h4>
                         <h6 className="text-secondary"><small>id: {cardData.id} - created 2 years ago</small></h6>
