@@ -4,6 +4,7 @@ import CardComponent from './CardComponent';
 class ContentView extends React.Component {
     render() {
         if (this.props.list && this.props.list.length) {
+            let holder = this.props.list.map((element, index) => <CardComponent key={index} list={element} />);
             return <div className="col-md-10">
                 <h4 className="mb-5">Selected Filters</h4>
                 <div className="row">
@@ -30,10 +31,7 @@ class ContentView extends React.Component {
                 </div>
                 {/* <!-- cards --> */}
                 <div className="row my-3 pr-3">
-                    <CardComponent list={this.props.list[0]} />
-                    <CardComponent list={this.props.list[1]} />
-                    <CardComponent list={this.props.list[2]} />
-                    <CardComponent list={this.props.list[3]} />
+                    {holder}
                 </div>
             </div>;
         } else {

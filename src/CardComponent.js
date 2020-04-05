@@ -6,7 +6,7 @@ class CardComponent extends React.Component {
         let cardData = this.props.list;
         return <div className="col-md-3 col-6 px-0">
             <div className="card bg-dark text-white">
-                <img className="card-img-top" src={cardData.image}
+                <img className="card-img-top dimensions" src={cardData.image}
                     alt={cardData.name} />
                 <div className="card-img-overlay">
                     <div className="card-text bg-dark overlay-text col-md-12 text-truncate">

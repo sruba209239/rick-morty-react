@@ -9,20 +9,20 @@ class FiltersView extends React.Component {
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="humanFilter"></input>
                     <label className="form-check-label" htmlFor="humanFilter">
-                        Human
-                </label>
+                        <small>Human</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="mythologyFilter"></input>
                     <label className="form-check-label" htmlFor="mythologyFilter">
-                        Mythology
-                </label>
+                        <small>Mythology</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="otherFilter" />
                     <label className="form-check-label" htmlFor="otherFilter">
-                        Other Species ...
-                </label>
+                        <small>Other Species ...</small>
+                    </label>
                 </div>
             </div>
 
@@ -31,14 +31,14 @@ class FiltersView extends React.Component {
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="maleFilter" />
                     <label className="form-check-label" htmlFor="maleFilter">
-                        Male
-                </label>
+                        <small>Male</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="femaleFilter" />
                     <label className="form-check-label" htmlFor="femaleFilter">
-                        Female
-                </label>
+                        <small>Female</small>
+                    </label>
                 </div>
             </div>
 
@@ -47,26 +47,26 @@ class FiltersView extends React.Component {
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="unknownFilter" />
                     <label className="form-check-label" htmlFor="unknownFilter">
-                        Unknown
-                </label>
+                        <small>Unknown</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="postFilter" />
                     <label className="form-check-label" htmlFor="postFilter">
-                        Post-Apocalyptic Earth
-                </label>
+                        <small>Post-Apocalyptic Earth</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="nuptiaFilter" />
                     <label className="form-check-label" htmlFor="nuptiaFilter">
-                        Nuptia 4
-                </label>
+                        <small>Nuptia 4</small>
+                    </label>
                 </div>
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="otherOriginFilter" />
                     <label className="form-check-label" htmlFor="otherOriginFilter">
-                        Other Origins...
-                </label>
+                        <small>Other Origins...</small>
+                    </label>
                 </div>
             </div>
         </div>
