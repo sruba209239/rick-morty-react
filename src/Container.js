@@ -54,21 +54,26 @@ class Container extends React.Component {
 
     render() {
         let list = this.state.characterList;
+        let filter = [];
 
         if (list && list.length) {
-            // apply filters
-            // debugger;
-            // for (let el in this.state.filter) {
-            //     if (this.state.filter[el].length) {
-            //         list.filter(item => {
-            //             if (el.includes(item.species)) {
-            //                 return true;
-            //             } else {
-            //                 return false;
-            //             }
-            //         });
-            //     }
-            // }
+            // apply species filters
+            if (this.state.filter.species.length) {
+                debugger;
+                filter = this.state.filter.species;
+                if (filter.includes('other')) {
+                    list = this.state.characterList.filter(item => (item.species.toLowerCase() !== 'human' && item.species.toLowerCase() !== 'alien'));
+                } else {
+                    list = [];
+                }
+                filter.forEach(el => {
+                    list = list.concat(this.state.characterList.filter(item => (item.species.toLowerCase() === el)));
+                });
+            } else {
+                list = this.state.characterList.filter(item => (item.species));
+            }
+
+            debugger;
 
             return <div className="container-fluid">
                 <p>this.state.filter.species : {this.state.filter.species}</p>
