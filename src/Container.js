@@ -95,9 +95,6 @@ class Container extends React.Component {
 
 
             return <div className="container-fluid">
-                <p>this.state.filter.species : {this.state.filter.species}</p>
-                <p>this.state.filter.gender : {this.state.filter.gender}</p>
-                <p>this.state.filter.origin : {this.state.filter.origin}</p>
                 <div className="row py-5">
                     <FiltersView filter={(el) => this.filter(el)} />
                     <ContentView list={list} />
