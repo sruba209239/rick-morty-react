@@ -5,10 +5,12 @@ class CardComponent extends React.Component {
         let cardData = this.props.list;
         return <div className="col-md-3 col-6 px-0 bg-black">
             <div className="card bg-dark text-white card-set">
-                <div>
-                    <img className="card-img-top" src={cardData.image}
-                        alt={cardData.name} />
-                    <div className="overlay-text px-2 text-truncate">
+                <div className="card-header p-0">
+                    <div className="card-image">
+                        <img className="card-img-top" src={cardData.image}
+                            alt={cardData.name} />
+                    </div>
+                    <div className="overlay-text px-2 text-truncate col-md-12">
                         <h4 className="text-white">{cardData.name}</h4>
                         <h6 className="text-secondary"><small>id: {cardData.id} - created 2 years ago</small></h6>
                     </div>
