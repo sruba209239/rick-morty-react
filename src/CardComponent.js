@@ -3,7 +3,7 @@ import React from 'react';
 class CardComponent extends React.Component {
     render() {
         let cardData = this.props.list;
-        return <div className="col-md-3 col-6 px-0 bg-black">
+        return <div className="col-6 col-sm-6 col-md-3 px-0 bg-black">
             <div className="card bg-dark text-white card-set">
                 <div className="card-header p-0">
                     <div className="card-image">
