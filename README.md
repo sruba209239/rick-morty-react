@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation steps
+
+- git clone https://github.com/sruba209239/rick-morty-react.git
+- cd rick-morty-react/
+- npm i
+- npm start
+
+## Generic details below
+
 ## Available Scripts
 
 In the project directory, you can run:
