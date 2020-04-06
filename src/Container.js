@@ -118,9 +118,6 @@ class Container extends React.Component {
                         <li className={`page-item ${this.state.info.prev ? "" : "disabled"}`}>
                             <span className="page-link" onClick={() => this.getCharacters(this.state.info.prev)}>Previous</span>
                         </li>
-                        {/* <li className="page-item"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li> */}
                         <li className={`page-item ${this.state.info.next ? "" : "disabled"}`}>
                             <span className="page-link" onClick={() => this.getCharacters(this.state.info.next)}>Next</span>
                         </li>

@@ -51,19 +51,19 @@ class FiltersView extends React.Component {
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('post-apocalyptic earth')} id="postFilter" onChange={() => this.props.filter(['origin', 'post-apocalyptic earth'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.origin.includes('post-apocalyptic earth')} id="postFilter" onChange={() => this.props.filter(['origin', 'post-apocalyptic earth'])} />
                     <label className="form-check-label" htmlFor="postFilter">
                         <small>Post-Apocalyptic Earth</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('nuptia 4')} id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia 4'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.origin.includes('nuptia 4')} id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia 4'])} />
                     <label className="form-check-label" htmlFor="nuptiaFilter">
                         <small>Nuptia 4</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('otherOrigin')} id="otherOriginFilter" onChange={() => this.props.filter(['origin', 'otherOrigin'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.origin.includes('otherOrigin')} id="otherOriginFilter" onChange={() => this.props.filter(['origin', 'otherOrigin'])} />
                     <label className="form-check-label" htmlFor="otherOriginFilter">
                         <small>Other Origins...</small>
                     </label>
