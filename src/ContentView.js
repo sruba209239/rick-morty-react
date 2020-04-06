@@ -48,11 +48,10 @@ class ContentView extends React.Component {
                 }
             }
             const filterList = Object.values(this.props.filters).flat();
-            console.error(filterList);
             // markup for filters selected
-            const filtersMarkup = filterList.map(el => {
-                return <button type="button" class="btn btn-secondary mr-2 mb-2">
-                    {el} <span class="badge badge-light">X</span>
+            const filtersMarkup = filterList.map((el, index) => {
+                return <button type="button" className="btn btn-secondary mr-2 mb-2" key={index}>
+                    {el} <span className="badge badge-light" onClick={() => this.props.closeFilter(el, index)}>X</span>
                 </button>
             });
 

@@ -7,19 +7,19 @@ class FiltersView extends React.Component {
             <div className="border border-dark p-3">
                 <h6>Species</h6>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="humanFilter" onChange={() => this.props.filter(['species', 'human'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('human')} id="humanFilter" onChange={() => this.props.filter(['species', 'human'])} />
                     <label className="form-check-label" htmlFor="humanFilter">
                         <small>Human</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="alienFilter" onChange={() => this.props.filter(['species', 'alien'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('alien')} id="alienFilter" onChange={() => this.props.filter(['species', 'alien'])} />
                     <label className="form-check-label" htmlFor="alienFilter">
                         <small>Alien</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="otherFilter" onChange={() => this.props.filter(['species', 'other'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('other')} id="otherFilter" onChange={() => this.props.filter(['species', 'other'])} />
                     <label className="form-check-label" htmlFor="otherFilter">
                         <small>Other Species ...</small>
                     </label>
@@ -29,13 +29,13 @@ class FiltersView extends React.Component {
             <div className="border border-dark p-3 my-3">
                 <h6>Gender</h6>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="maleFilter" onChange={() => this.props.filter(['gender', 'male'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.gender.includes('male')} id="maleFilter" onChange={() => this.props.filter(['gender', 'male'])} />
                     <label className="form-check-label" htmlFor="maleFilter">
                         <small>Male</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="femaleFilter" onChange={() => this.props.filter(['gender', 'female'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.gender.includes('female')} id="femaleFilter" onChange={() => this.props.filter(['gender', 'female'])} />
                     <label className="form-check-label" htmlFor="femaleFilter">
                         <small>Female</small>
                     </label>
@@ -45,25 +45,25 @@ class FiltersView extends React.Component {
             <div className="border border-dark p-3">
                 <h6>Origin</h6>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="unknownFilter" onChange={() => this.props.filter(['origin', 'unknown'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.origin.includes('unknown')} id="unknownFilter" onChange={() => this.props.filter(['origin', 'unknown'])} />
                     <label className="form-check-label" htmlFor="unknownFilter">
                         <small>Unknown</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="postFilter" onChange={() => this.props.filter(['origin', 'post-apocalyptic earth'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('post-apocalyptic earth')} id="postFilter" onChange={() => this.props.filter(['origin', 'post-apocalyptic earth'])} />
                     <label className="form-check-label" htmlFor="postFilter">
                         <small>Post-Apocalyptic Earth</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia 4'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('nuptia 4')} id="nuptiaFilter" onChange={() => this.props.filter(['origin', 'nuptia 4'])} />
                     <label className="form-check-label" htmlFor="nuptiaFilter">
                         <small>Nuptia 4</small>
                     </label>
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="otherOriginFilter" onChange={() => this.props.filter(['origin', 'other'])} />
+                    <input className="form-check-input" type="checkbox" checked={this.props.filters.species.includes('otherOrigin')} id="otherOriginFilter" onChange={() => this.props.filter(['origin', 'otherOrigin'])} />
                     <label className="form-check-label" htmlFor="otherOriginFilter">
                         <small>Other Origins...</small>
                     </label>

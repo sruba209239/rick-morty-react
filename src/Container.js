@@ -52,6 +52,20 @@ class Container extends React.Component {
             });
     }
 
+    closeFilter(el, index) {
+        let newState = JSON.parse(JSON.stringify(this.state));
+        let currentFilter = newState.filter;
+
+        for (let item in currentFilter) {
+            let pos = currentFilter[item].indexOf(el);
+            if (pos !== -1) {
+                currentFilter[item].splice(pos, 1);
+                break;
+            }
+        }
+        this.setState(newState);
+    }
+
     render() {
         let list = this.state.characterList;
         let filter = [];
@@ -85,7 +99,7 @@ class Container extends React.Component {
                 let tempList = list.slice();
                 list = [];
                 filter = this.state.filter.origin;
-                if (filter.includes('other')) {
+                if (filter.includes('otherOrigin')) {
                     list = list.concat(tempList.filter(item => (item.origin.name.toLowerCase() !== 'unknown' && item.origin.name.toLowerCase() !== 'post-apocalyptic earth' && item.origin.name.toLowerCase() !== 'nuptia 4')));
                 }
                 filter.forEach(el => {
@@ -96,8 +110,8 @@ class Container extends React.Component {
 
             return <div className="container-fluid">
                 <div className="row">
-                    <FiltersView filter={(el) => this.filter(el)} />
-                    <ContentView list={list} filters={this.state.filter} />
+                    <FiltersView filters={this.state.filter} filter={(el) => this.filter(el)} />
+                    <ContentView list={list} filters={this.state.filter} closeFilter={(el, index) => this.closeFilter(el, index)} />
                 </div><br />
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
