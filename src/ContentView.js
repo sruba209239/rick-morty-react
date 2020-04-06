@@ -38,7 +38,6 @@ class ContentView extends React.Component {
         });
     }
     render() {
-        // if (this.props.list && this.props.list.length) {
         if (!this.state.search && this.props.list && this.props.list.length) {
             if (this.state.currentOrder === 'desc') {
                 this.state.holder = this.props.list.sort((a, b) => (b.id - a.id));
@@ -57,7 +56,6 @@ class ContentView extends React.Component {
 
 
         const cards = this.props.list.length ? this.state.holder.map((element, index) => <CardComponent key={index} list={element} />) : [<div className="col-md-12"><p className="text-center">Nothing to show</p></div>];
-        // if (cards && cards.length) {
         return <div className="col-md-10">
             <h4 className="my-3">Selected Filters</h4>
             <div className="row">
@@ -100,56 +98,6 @@ class ContentView extends React.Component {
                 </ul>
             </nav><br />
         </div>;
-        // }
-        // }
-
-        // return null;
-
-        // const filterList = Object.values(this.props.filters).flat();
-        // // markup for filters selected
-        // const filtersMarkup = filterList.map((el, index) => {
-        //     return <button type="button" className="btn btn-secondary mr-2 mb-2" key={index}>
-        //         {el} <span className="badge badge-light" onClick={() => this.props.closeFilter(el, index)}>X</span>
-        //     </button>
-        // });
-        // return <div className="col-md-10">
-        //     <h4 className="my-3">Selected Filters</h4>
-        //     <div className="row">
-        //         <div className="col-md-12">{filtersMarkup}</div>
-        //     </div>
-        //     <div className="row">
-        //         <div className="col-md-10 col-sm-12 mb-3">
-        //             <div className="input-group">
-        //                 <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} />
-        //                 <div className="input-group-append">
-        //                     <button className={`btn btn-secondary ${this.state.search ? "disabled" : ""}`} onClick={() => this.searchFunction()}>Search</button>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //         <div className="col-md-2 col-sm-12 mb-3">
-        //             <div className="dropdown">
-        //                 <button className="btn btn-secondary dropdown-toggle col-sm-12 text-left" type="button"
-        //                     id="sortmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        //                     Sort by ID
-        //             </button>
-        //                 <div className="dropdown-menu col-sm-12 text-left" aria-labelledby="sortmenu">
-        //                     <button className="dropdown-item" type="button" onClick={() => this.sortList('asc')}>Ascending</button>
-        //                     <button className="dropdown-item" type="button" onClick={() => this.sortList('desc')}>Descending</button>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <nav aria-label="Page navigation example">
-        //         <ul className="pagination justify-content-center">
-        //             <li className={`page-item ${this.props.info.prev ? "" : "disabled"}`}>
-        //                 <span className="page-link" onClick={() => this.props.getData(this.props.info.prev)}>Previous</span>
-        //             </li>
-        //             <li className={`page-item ${this.props.info.next ? "" : "disabled"}`}>
-        //                 <span className="page-link" onClick={() => this.props.getData(this.props.info.next)}>Next</span>
-        //             </li>
-        //         </ul>
-        //     </nav><br />
-        // </div>;
     }
 }
 
