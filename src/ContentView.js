@@ -37,6 +37,12 @@ class ContentView extends React.Component {
             search: true
         });
     }
+    keyPress(e) {
+        if (e.charCode === 13) {
+            this.searchFunction();
+        }
+    }
+
     render() {
         if (!this.state.search && this.props.list && this.props.list.length) {
             if (this.state.currentOrder === 'desc') {
@@ -64,7 +70,7 @@ class ContentView extends React.Component {
             <div className="row">
                 <div className="col-md-10 col-sm-12 mb-3">
                     <div className="input-group">
-                        <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} />
+                        <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} onKeyPress={e => this.keyPress(e)} />
                         <div className="input-group-append">
                             <button className={`btn btn-secondary ${this.state.search ? "disabled" : ""}`} onClick={() => this.searchFunction()}>Search</button>
                         </div>
