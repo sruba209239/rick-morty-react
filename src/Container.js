@@ -111,18 +111,9 @@ class Container extends React.Component {
             return <div className="container-fluid">
                 <div className="row">
                     <FiltersView filters={this.state.filter} filter={(el) => this.filter(el)} />
-                    <ContentView list={list} filters={this.state.filter} closeFilter={(el, index) => this.closeFilter(el, index)} />
+                    <ContentView getData={url => this.getCharacters(url)} info={this.state.info} list={list} filters={this.state.filter} closeFilter={(el, index) => this.closeFilter(el, index)} />
                 </div><br />
-                <nav aria-label="Page navigation example">
-                    <ul className="pagination justify-content-center">
-                        <li className={`page-item ${this.state.info.prev ? "" : "disabled"}`}>
-                            <span className="page-link" onClick={() => this.getCharacters(this.state.info.prev)}>Previous</span>
-                        </li>
-                        <li className={`page-item ${this.state.info.next ? "" : "disabled"}`}>
-                            <span className="page-link" onClick={() => this.getCharacters(this.state.info.next)}>Next</span>
-                        </li>
-                    </ul>
-                </nav><br />
+
                 <footer className="text-center text-small">
                     <p>@ 2020 Publicis Sapient</p>
                 </footer>

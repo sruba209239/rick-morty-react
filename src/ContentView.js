@@ -88,7 +88,17 @@ class ContentView extends React.Component {
                     {/* <!-- cards --> */}
                     <div className="row">
                         {cards}
-                    </div>
+                    </div><br />
+                    <nav aria-label="Page navigation example">
+                        <ul className="pagination justify-content-center">
+                            <li className={`page-item ${this.props.info.prev ? "" : "disabled"}`}>
+                                <span className="page-link" onClick={() => this.props.getData(this.props.info.prev)}>Previous</span>
+                            </li>
+                            <li className={`page-item ${this.props.info.next ? "" : "disabled"}`}>
+                                <span className="page-link" onClick={() => this.props.getData(this.props.info.next)}>Next</span>
+                            </li>
+                        </ul>
+                    </nav><br />
                 </div>;
             }
         }
