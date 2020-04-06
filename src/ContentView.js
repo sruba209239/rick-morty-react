@@ -47,11 +47,23 @@ class ContentView extends React.Component {
                     this.state.holder = this.props.list.sort((a, b) => (a.id - b.id));
                 }
             }
+            const filterList = Object.values(this.props.filters).flat();
+            console.error(filterList);
+            // markup for filters selected
+            const filtersMarkup = filterList.map(el => {
+                return <button type="button" class="btn btn-secondary mr-2 mb-2">
+                    {el} <span class="badge badge-light">X</span>
+                </button>
+            });
+
 
             const cards = this.state.holder.map((element, index) => <CardComponent key={index} list={element} />);
             if (cards && cards.length) {
                 return <div className="col-md-10">
                     <h4 className="my-3">Selected Filters</h4>
+                    <div className="row">
+                        <div className="col-md-12">{filtersMarkup}</div>
+                    </div>
                     <div className="row">
                         <div className="col-md-10 col-sm-12 mb-3">
                             <div className="input-group">

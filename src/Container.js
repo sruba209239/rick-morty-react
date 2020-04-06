@@ -97,7 +97,7 @@ class Container extends React.Component {
             return <div className="container-fluid">
                 <div className="row">
                     <FiltersView filter={(el) => this.filter(el)} />
-                    <ContentView list={list} />
+                    <ContentView list={list} filters={this.state.filter} />
                 </div><br />
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
