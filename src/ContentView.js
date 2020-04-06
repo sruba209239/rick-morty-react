@@ -57,7 +57,7 @@ class ContentView extends React.Component {
                             <div className="input-group">
                                 <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} />
                                 <div className="input-group-append">
-                                    <button className="btn btn-secondary" disabled={this.state.search} onClick={() => this.searchFunction()}>Search</button>
+                                    <button className={`btn btn-secondary ${this.state.search ? "disabled" : ""}`} onClick={() => this.searchFunction()}>Search</button>
                                 </div>
                             </div>
                         </div>
