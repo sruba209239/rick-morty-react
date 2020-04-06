@@ -51,9 +51,9 @@ class ContentView extends React.Component {
             const cards = this.state.holder.map((element, index) => <CardComponent key={index} list={element} />);
             if (cards && cards.length) {
                 return <div className="col-md-10">
-                    <h4 className="mb-5">Selected Filters</h4>
+                    <h4 className="my-3">Selected Filters</h4>
                     <div className="row">
-                        <div className="col-md-10 col-sm-12">
+                        <div className="col-md-10 col-sm-12 my-3">
                             <div className="input-group">
                                 <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} />
                                 <div className="input-group-append">
@@ -61,7 +61,7 @@ class ContentView extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2 col-sm-12">
+                        <div className="col-md-2 col-sm-12 my-3">
                             <div className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle col-sm-12 text-left" type="button"
                                     id="sortmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,7 +75,7 @@ class ContentView extends React.Component {
                         </div>
                     </div>
                     {/* <!-- cards --> */}
-                    <div className="row my-3">
+                    <div className="row">
                         {cards}
                     </div>
                 </div>;

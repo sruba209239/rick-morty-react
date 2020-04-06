@@ -3,7 +3,7 @@ import React from 'react';
 class FiltersView extends React.Component {
     render() {
         return <div className="col-md-2">
-            <h4 className="mb-5">Filters</h4>
+            <h4 className="my-3">Filters</h4>
             <div className="border border-dark p-3">
                 <h6>Species</h6>
                 <div className="form-check">

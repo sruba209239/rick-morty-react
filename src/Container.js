@@ -95,7 +95,7 @@ class Container extends React.Component {
 
 
             return <div className="container-fluid">
-                <div className="row py-5">
+                <div className="row">
                     <FiltersView filter={(el) => this.filter(el)} />
                     <ContentView list={list} />
                 </div>
