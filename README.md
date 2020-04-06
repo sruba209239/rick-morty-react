@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation steps
 
@@ -7,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - npm i
 - npm start
 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
