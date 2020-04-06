@@ -31,8 +31,8 @@ class Container extends React.Component {
         this.setState(newState);
     }
 
-    getCharacters() {
-        fetch(this.state.url)
+    getCharacters(url) {
+        fetch(url)
             .then(response => {
                 if (response.status !== 200) {
                     console.log('Unable to fetch characters. Status Code: ' + response.status);
@@ -41,10 +41,10 @@ class Container extends React.Component {
 
                 response.json().then(data => {
                     console.log(data);
-                    this.setState({
-                        characterList: data.results,
-                        info: data.info
-                    });
+                    let newState = JSON.parse(JSON.stringify(this.state));
+                    newState.characterList = data.results;
+                    newState.info = data.info;
+                    this.setState(newState);
                 });
             })
             .catch(err => {
@@ -98,7 +98,20 @@ class Container extends React.Component {
                 <div className="row">
                     <FiltersView filter={(el) => this.filter(el)} />
                     <ContentView list={list} />
-                </div>
+                </div><br />
+                <nav aria-label="Page navigation example">
+                    <ul className="pagination justify-content-center">
+                        <li className={`page-item ${this.state.info.prev ? "" : "disabled"}`}>
+                            <span className="page-link" onClick={() => this.getCharacters(this.state.info.prev)}>Previous</span>
+                        </li>
+                        {/* <li className="page-item"><a className="page-link" href="#">1</a></li>
+                        <li className="page-item"><a className="page-link" href="#">2</a></li>
+                        <li className="page-item"><a className="page-link" href="#">3</a></li> */}
+                        <li className={`page-item ${this.state.info.next ? "" : "disabled"}`}>
+                            <span className="page-link" onClick={() => this.getCharacters(this.state.info.next)}>Next</span>
+                        </li>
+                    </ul>
+                </nav><br />
                 <footer className="text-center text-small">
                     <p>@ 2020 Publicis Sapient</p>
                 </footer>
