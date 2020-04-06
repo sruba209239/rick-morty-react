@@ -53,7 +53,7 @@ class ContentView extends React.Component {
                 return <div className="col-md-10">
                     <h4 className="my-3">Selected Filters</h4>
                     <div className="row">
-                        <div className="col-md-10 col-sm-12 my-3">
+                        <div className="col-md-10 col-sm-12 mb-3">
                             <div className="input-group">
                                 <input type="text" className="form-control col-md-6" placeholder="Enter name" onChange={e => this.searchField(e)} />
                                 <div className="input-group-append">
@@ -61,7 +61,7 @@ class ContentView extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2 col-sm-12 my-3">
+                        <div className="col-md-2 col-sm-12 mb-3">
                             <div className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle col-sm-12 text-left" type="button"
                                     id="sortmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
