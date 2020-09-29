@@ -1,4 +1,4 @@
-See the app in action : https://rickmorty-react-sruba.herokuapp.com/index.html
+
 
 
 ## Installation steps
